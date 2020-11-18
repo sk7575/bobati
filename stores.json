@@ -1,0 +1,159 @@
+{"stores": [ {
+    "name" : "Kung Fu",
+    "MilkTea" : {
+        "Coffee" : true,
+        "Hokkaido" : false,
+        "Honey" : true,
+        "Jasmine" : false,
+        "Matcha" :false ,
+        "Okinawa" : false,
+        "Oolong" : true,
+        "Rose" : true,
+        "Taro" : true,
+        "Thai" : true,
+        "Wintermelon" : true
+    },
+    "FruitTea" : {
+        "Grapefruit" : true,
+        "Lychee" : true,
+        "Mango" : true,
+        "PassionFruit" : true,
+        "Peach" : true,
+        "Pineapple" : true,
+        "Strawberry" : false,
+        "Wintermelon" :false 
+    }	
+    },
+    {
+    "name" : "TeaSon",
+    "MilkTea" : {
+        "Coffee" : false,
+        "Hokkaido" : true,
+        "Honey" :false ,
+        "Jasmine" : false,
+        "Matcha" :false ,
+        "Okinawa" : true,
+        "Oolong" :false ,
+        "Rose" :false ,
+        "Taro" : true,
+        "Thai" : true,
+        "Wintermelon" : true
+    },
+    "FruitTea" : {
+        "Grapefruit" : false,
+        "Lychee" : false,
+        "Mango" : false ,
+        "PassionFruit" : false ,
+        "Peach" : false ,
+        "Pineapple" : false ,
+        "Strawberry" : false,
+        "Wintermelon" : false
+    }
+    },
+    {
+    "name" : "Loffti",
+    "MilkTea" : {
+        "Coffee" : true,
+        "Hokkaido" : false ,
+        "Honey" : true,
+        "Jasmine" : false ,
+        "Matcha" : true,
+        "Okinawa" :false  ,
+        "Oolong" :false ,
+        "Rose" : false ,
+        "Taro" :true ,
+        "Thai" :true ,
+        "Wintermelon" :false
+        },
+    "FruitTea" : {
+        "Grapefruit" :false  ,
+        "Lychee" : true,
+        "Mango" : false ,
+        "PassionFruit" : false ,
+        "Peach" :true  ,
+        "Pineapple" : false ,
+        "Strawberry" : true,
+        "Wintermelon" :false
+    }
+    },
+    {
+    "name" : "BrewTea", 
+    "MilkTea" : {
+        "Coffee" : true,
+        "Hokkaido" : true,
+        "Honey" : true,
+        "Jasmine" : true,
+        "Matcha" : true,
+        "Okinawa" : true,
+        "Oolong" : true,
+        "Rose" : true,
+        "Taro" : true,
+        "Thai" : true,
+        "Wintermelon" : true
+        },
+    "FruitTea" : {
+        "Grapefruit" : true,
+        "Lychee" : true,
+        "Mango" : true,
+        "PassionFruit" : true,
+        "Peach" : true,
+        "Pineapple" : true,
+        "Strawberry" : true,
+        "Wintermelon" : true
+    }	
+    },
+    {
+    "name" : "7Leaves",  
+    "MilkTea" : {
+        "Coffee" :false ,
+        "Hokkaido" :false ,
+        "Honey" :false ,
+        "Jasmine" : true,
+        "Matcha" : true,
+        "Okinawa" :false ,
+        "Oolong" : true,
+        "Rose" :false ,
+        "Taro" : true,
+        "Thai" : true,
+        "Wintermelon" :false
+    },
+    "FruitTea" : {
+        "Grapefruit" : false,
+        "Lychee" : false,
+        "Mango" :false,
+        "PassionFruit" :false,
+        "Peach" :false,
+        "Pineapple" :false,
+        "Strawberry" :false,
+        "Wintermelon" :false
+    }
+    },
+    {
+    "name" : "TeaSpace",
+    "MilkTea" : {
+        "Coffee" : true,
+        "Hokkaido" : true,
+        "Honey" : true,
+        "Jasmine" : true,
+        "Matcha" : false,
+        "Okinawa" : true,
+        "Oolong" : true,
+        "Rose" : false,
+        "Taro" : true,
+        "Thai" : true,
+        "Wintermelon" : true
+    },
+    "FruitTea" : {
+        "Grapefruit" : false,
+        "Lychee" : true,
+        "Mango" : true ,
+        "PassionFruit" : true,
+        "Peach" : true,
+        "Pineapple" : false,
+        "Strawberry" : true,
+        "Wintermelon" : true
+    }
+    }
+
+]}
+

@@ -1,0 +1,100 @@
+{
+	"Boba" : [
+		{
+			"Name": "Coffee" ,
+			"Base": "Milk",
+			"Flavor": "Coffee"
+		},
+		{
+			"Name": "Hokkaido",
+			"Base": "Milk",
+			"Flavor": "Hokkaido"
+		},
+		{
+			"Name": "Honey",
+			"Base": "Milk",
+			"Flavor": "Honey"
+		},
+		{
+			"Name": "Jasmine",
+			"Base": "Milk",
+			"Flavor": "Jasmine"
+		},
+		{
+			"Name": "Matcha",
+			"Base": "Milk",
+			"Flavor": "Matcha"
+		},
+		{
+			"Name": "Okinawa",
+			"Base": "Milk",
+			"Flavor": "Okinawa"
+		},
+		{
+			"Name": "Oolong",
+			"Base": "Milk",
+			"Flavor": "Oolong"
+		},
+		{
+			"Name": "Rose",
+			"Base": "Milk",
+			"Flavor": "Rose"
+		},
+		{
+			"Name": "Taro",
+			"Base": "Milk" ,
+			"Flavor": "Taro"
+		},
+		{
+			"Name": "Thai",
+			"Base": "Milk",
+			"Flavor": "Thai"
+		},
+		{
+			"Name": "Wintermelon",
+			"Base": "Green",
+			"Flavor": "Wintermelon"
+		},
+		{
+			"Name": "Grapefruit",
+			"Base": "Green",
+			"Flavor": "Grapefruit"
+		},
+		{
+			"Name": "Lychee",
+			"Base": "Green",
+			"Flavor": "Lychee"
+		},
+		{
+			"Name": "Mango",
+			"Base": "Green",
+			"Flavor": "Mango"
+		},
+		{
+			"Name": "Passion Fruit",
+			"Base": "Green",
+			"Flavor": "Passion"
+		},
+		{
+			"Name": "Peach",
+			"Base": "Green",
+			"Flavor": "Peach"
+		},
+		{
+			"Name": "Pineapple",
+			"Base": "Black",
+			"Flavor": "Pineapple"
+		},
+		{
+			"Name": "Strawberry",
+			"Base": "Black",
+			"Flavor": "Strawberry"
+		},
+		{
+			"Name": "Wintermelon",
+			"Base": "Black",
+			"Flavor": "Wintermelon"
+		}
+	]
+}
+
