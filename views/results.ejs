@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+  
+  <body id="page-top">
+    <style>
+      .resultImage {
+        width: 85%;
+      }
+
+      .page{
+        display:none;
+      }
+      .page.active{
+        display:block;
+      }
+      #bar { 
+        height: 5px;  
+        width:200px;
+        position: relative;
+        background: #d2d2d2;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+        margin:0px auto;
+        display:block;
+        margin-top:10px;
+      }
+      #bar > span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: rgb(70, 87, 94);
+        background-image: linear-gradient(
+          center bottom,
+          rgb(70, 87, 94) 37%,
+          rgb(70, 87, 95) 69%
+        );
+        box-shadow: 
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+
+      /* unnecessary css */
+      @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400&display=swap');
+      body{
+        font-family: 'Nunito Sans', sans-serif;
+        text-align:center;
+        color: #46575E;
+      }
+      h2{
+        font-weight:800;
+        margin-bottom:0;
+        font-size:30px;
+      }
+      p.small{
+        font-size:14px;
+        margin-top:5px;
+      }
+      p{
+        font-size:16px;
+        margin:10px 0;
+      }
+      p.question{
+        font-size:35px;
+        font-weight:300;
+        margin-bottom:30px;
+      }
+      p.green{
+        color:#5FB429;
+        font-weight:800;
+        margin-top:-30px;
+        margin-bottom:50px;
+      }
+      .page{
+        margin:50px 0;
+      }
+      button{
+        font-size:14px;
+        background: #46575E;
+        color:#fff;
+        padding: 10px 50px;
+        font-weight:800;
+        border:none;
+        text-shadow:none;
+        box-shadow: 0px 5px 5px #40404021;
+        margin:0 5px;
+        border-radius:100px;
+        cursor:pointer;
+      }
+      button:hover{
+        transition: all .3s;
+        background: #5FB429;
+      }
+      button.green{
+        background:#5FB429;
+      }
+      button.green:hover{
+        transition: all .3s;
+        background: #46575E;
+      }
+      #progressBar{
+        margin-bottom:0;
+      }
+
+      .progress {
+        background: white;
+      }
+
+      form{
+        margin:0px auto;
+        display:block;
+        
+      }
+      .outerForm{
+        display:inline-flex;
+        align-items:center;
+        justify-content: center;
+        background:#efefef;
+        border-radius:100px;
+      }
+      input[type=email]{
+        background: #efefef;
+        border: none;
+        text-align: left;
+        padding: 10px 20px;
+        width:200px;
+        border-radius: 100px 0 0 100px;
+        
+        
+        color: #46575E;
+        font-size:14px;
+      }
+      input[type="submit"]{
+        background: #5FB429;
+        font-size:14px;
+        color:#fff;
+        padding: 10px 20px;
+        font-weight:800;
+        border:none;
+        text-shadow:none;
+        margin: 5px;
+        border-radius:100px;
+        cursor:pointer;
+      }
+      input[type="submit"]:hover{
+        transition:all .3s;
+        background: #46575E;
+      }
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #46575E;
+        font-size:14px;
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #46575E;
+        font-size:14px;
+      }
+
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #46575E;
+        font-size:14px;
+      }
+
+      .backBtn {
+        display: block;
+        margin-top: 40px;
+        cursor:pointer;
+        text-decoration:underline;
+      }
+      /* end unnecessary css */
+    </style>
+
+    <!-- START nav -->
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand js-scroll-trigger" href="/"><%= title %></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/" class="nav-link js-scroll-trigger" style="color: white;">Home</a></li>
+            <li class="nav-item"><a href="/results" class="nav-link js-scroll-trigger" style="color: white;">Tí Me!</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <!--QUIZ Section START-->
+		<section class="ftco-section ftco-wrap-about" id="about" style="padding: 3em !important">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 wrap-about pt-5 pt-md-5 pb-md-3 ftco-animate">
+            <h2>Get Matched!</h2>
+            <p class="small">Complete this quiz to get matched with a Boba drink</p>
+
+            <div class="page active base page1">
+              <p class="question">Choose your base</p>
+              <button class="btnSelection mb-1" data-eval="Milk">Milk</button>
+              <button class="btnSelection mb-1" data-eval="Green">Green Tea</button>
+              <button class="btnSelection mb-1" data-eval="Black">Black Tea</button>
+            </div>
+            <div class="page milkFlavors page2">
+              <p class="question">Choose your flavor</p>
+              <button class="btnSelection mb-1" data-eval="Coffee">Coffee</button>
+              <button class="btnSelection mb-1" data-eval="Hokkaido">Hokkaido</button>
+              <button class="btnSelection mb-1" data-eval="Honey">Honey</button>
+              <button class="btnSelection mb-1" data-eval="Jasmine">Jasmine</button>
+              <button class="btnSelection mb-1" data-eval="Matcha">Matcha</button>
+              <button class="btnSelection mb-1" data-eval="Okinawa">Okinawa</button>
+              <button class="btnSelection mb-1" data-eval="Oolong">Oolong</button>
+              <button class="btnSelection mb-1" data-eval="Rose">Rose</button>
+              <button class="btnSelection mb-1" data-eval="Taro">Taro</button>
+              <button class="btnSelection mb-1" data-eval="Thai">Thai</button>
+              <a class="backBtn">Go Back</a>
+            </div>
+            <div class="page greenFlavors page3">
+              <p class="question">Choose your flavor</p>
+              <button class="btnSelection mb-1" data-eval="Wintermelon">Wintermelon</button>
+              <button class="btnSelection mb-1" data-eval="Grapefruit">Grapefruit</button>
+              <button class="btnSelection mb-1" data-eval="Lychee">Lychee</button>
+              <button class="btnSelection mb-1" data-eval="Mango">Mango</button>
+              <button class="btnSelection mb-1" data-eval="Passion">Passionfruit</button>
+              <button class="btnSelection mb-1" data-eval="Peach">Peach</button>
+              <a class="backBtn">Go Back</a>
+            </div>
+            <div class="page blackFlavors page4">
+              <p class="question">Choose your flavor</p>
+              <button class="btnSelection mb-1" data-eval="Pineapple">Pineapple</button>
+              <button class="btnSelection mb-1" data-eval="Strawberry">Strawberry</button>
+              <button class="btnSelection mb-1" data-eval="Wintermelon">Wintermelon</button>
+              <a class="backBtn">Go Back</a>
+            </div>
+            <!-- This is the last page (results) -->
+            <div class="page page5">
+              <p class="question" id="resultText"></p>
+              <p class="green">You may restart by pressing the button below.</p>
+              
+              <form>
+                <div class="outerForm">
+                  <input class="submitResults" type="submit" value="Restart">
+                </div>
+              </form>
+
+            <button class ="yelp" >Find Stores on Yelp</button>
+            </div>
+
+            <div class="progress">
+              <div id="bar"><span class="barSpan" style="width: 14.2857%"></span></div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 d-flex">
+            <div id="resultImg" style="height:100%">
+            </div>
+          </div>
+         
+				</div>
+			</div>
+    </section>
+    <!--Quiz Questions END-->
+
+    <!--Footer Section START-->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Boba Tí</h2>
+              <p>Our mission is to help you find your perfect taste 
+                  according to your taste buds.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul> 
+            </div>
+          </div>
+          <div class="col-lg-4">
+          </div>
+          <div class="col-lg-4">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li class="nav-item"><a href="/" class="nav-link js-scroll-trigger">Home</a></li>
+                <li class="nav-item"><a href="/results" class="nav-link">Results</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer Section END-->
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/navscroll.js"></script>
+
+
+  <!-- scripts for adding the local JSON files -->
+
+  <!-- QUIZ SCRIPT -->
+  <script>
+    var page = 1;
+    var userSelections = [];
+    var buttons = document.querySelectorAll(".btnSelection");
+    var pages = document.querySelectorAll(".page");
+    var back = document.querySelectorAll(".backBtn");
+    var submitResults = document.querySelector(".submitResults");
+    var yelpButton = document.querySelector(".yelp");
+
+    yelpButton.addEventListener("click", function(){
+      //once this button is clicked immediately do a post request
+      var selections = JSON.stringify(userSelections);
+      $.post('/results', {results: selections});
+
+    })
+    // loop for adding selections to an array
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        // on button click, add data-eval value to array and send to next page function
+        userSelections.push(this.dataset.eval);
+        nextPage();
+      });
+    }
+
+    function nextPage() {
+      if (page < pages.length) {
+        // only go to last page
+        if (userSelections.length <= 1) {
+          if (userSelections[0] == "Milk")
+          page++;
+        else if (userSelections[0] == "Green")
+          page += 2;
+        else if (userSelections[0] == "Black")
+          page += 3; 
+        }
+        else
+          page = 5;
+        //update progress bar
+        console.log(page);
+        progressBar();
+      }
+
+      for (i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+      }
+
+      document.querySelector(".page" + page).classList.add("active");
+      // if on last page
+      if (page == pages.length){
+        
+        //console.log(selections);
+        //communicate results to the backend. 
+        //
+        // lastpage();
+        // these are checking for drink combos
+
+        if (userSelections.includes("Milk") && userSelections.includes("Coffee")) {
+          document.getElementById("resultText").innerText = "Coffee Milk Tea";
+          printImage("coffee.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Hokkaido")) {
+          document.getElementById("resultText").innerText = "Hokkaido Milk Tea";
+          printImage("hokkaido.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Honey")) {
+          document.getElementById("resultText").innerText = "Honey Milk Tea";
+          printImage("honey.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Jasmine")) {
+          document.getElementById("resultText").innerText = "Jasmine Milk Tea";
+          printImage("jasmine.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Matcha")) {
+          document.getElementById("resultText").innerText = "Matcha Milk Tea";
+          printImage("matcha.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Okinawa")) {
+          document.getElementById("resultText").innerText = "Okinawa Milk Tea";
+          printImage("okinawa.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Oolong")) {
+          document.getElementById("resultText").innerText = "Oolong Milk Tea";
+          printImage("oolong.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Rose")) {
+          document.getElementById("resultText").innerText = "Rose Milk Tea";
+          printImage("rose.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Taro")) {
+          document.getElementById("resultText").innerText = "Taro Milk Tea";
+          printImage("taro.png");
+        }
+        else if (userSelections.includes("Milk") && userSelections.includes("Thai")) {
+          document.getElementById("resultText").innerText = "Thai Tea";
+          printImage("thai.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Wintermelon")) {
+          document.getElementById("resultText").innerText = "Wintermelon Green Tea";
+          printImage("wintermelon.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Grapefruit")) {
+          document.getElementById("resultText").innerText = "Grapefruit Green Tea";
+          printImage("grapefruit.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Lychee")) {
+          document.getElementById("resultText").innerText = "Lychee Green Tea";
+          printImage("lychee.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Mango")) {
+          document.getElementById("resultText").innerText = "Mango Green Tea";
+          printImage("mango.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Passion")) {
+          document.getElementById("resultText").innerText = "Passionfruit Green Tea";
+          printImage("passion.png");
+        }
+        else if (userSelections.includes("Green") && userSelections.includes("Peach")) {
+          document.getElementById("resultText").innerText = "Peach Green Tea";
+          printImage("peach.png");
+        }
+        else if (userSelections.includes("Black") && userSelections.includes("Pineapple")) {
+          document.getElementById("resultText").innerText = "Pineapple Black Tea";
+          printImage("pineapple.png");
+        }
+        else if (userSelections.includes("Black") && userSelections.includes("Strawberry")) {
+          document.getElementById("resultText").innerText = "Strawberry Black Tea";
+          printImage("strawberry.png");
+        }
+        else if (userSelections.includes("Black") && userSelections.includes("Wintermelon")) {
+          document.getElementById("resultText").innerText = "Wintermelon Black Tea";
+          printImage("wintermelon.png");
+        }
+      }
+    }
+
+    function printImage(thisImg) {
+      var img = document.createElement("IMG");
+      img.src = "images/results/" + thisImg;
+      img.className = "resultImage";
+      document.getElementById('resultImg').appendChild(img);
+    }
+
+    function lastPage() {
+      /*
+      var choiceData = JSON.stringify(userSelections);
+      console.log("we made it to the last page");
+      console.log(choiceData);
+      document.getElementsByClassName("results").value = choiceData;
+
+      var checkData = document.getElementsByClassName("results").value;
+      console.log(checkData);
+      */
+
+      submitResults.addEventListener("click", function(){
+        console.log("Result clicked");
+      });
+
+    }
+
+    function progressBar() {
+      var math = (page / (pages.length)) * 100;
+      document.querySelector(".barSpan").style.width = math + "%";
+    }
+
+    for (i = 0; i < back.length; i++) {
+      back[i].addEventListener("click", function() {
+        prevPage();
+      });
+    }
+
+    function prevPage() {
+      if (userSelections.length > 1) {
+        if (userSelections[0] == "Milk")
+          page = 2;
+        else if (userSelections[0] == "Green")
+          page = 3;
+        else if (userSelections[0] == "Black")
+          page = 4; 
+        }
+        else
+          page = 1;
+      //update progress bar
+      progressBar();
+
+      for (i = 0; i < pages.length; i++) {
+        pages[i].classList.remove("active");
+      }
+      document.querySelector(".page" + page).classList.add("active");
+      
+      //remove last added to array
+      userSelections.pop();
+    }
+
+
+    
+
+  </script>
+    
+  </body>
+</html>
